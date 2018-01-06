@@ -10,16 +10,39 @@
 	working directory = state of last commit + changes
 	staging area = state of last commit + subset(changes)
 
-How can you use the staging area to make sure you have one commit per logical
-change?
+# How can you use the staging area to make sure you have one commit 
+  per logical change?
 
-What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
+	can add only those changes that correspond to logical change
+	to staging area-committing other changes separately
 
-How do the diagrams help you visualize the branch structure?
+# What are some situations when branches would be helpful in keeping your history
+  organized? How would branches help?
 
-What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+	-new mode
+	-experimental changes
+	We can add commits to a brach other than master , so as not to mess
+	with our project.When the experimental feature works okay , we can then
+	choose to incorporate it into master.
+	master branch will always have production quality code.
+	"context-switch"
 
-What are the pros and cons of Git's automatic merging vs. always doing merges
-manually?
+# How do the diagrams help you visualize the branch structure?
+
+	can visualise by running git log --graph --oneline master coins easy_mode
+	shows us parent linkages.
+
+# What is the result of merging two branches together? Why do we represent it in
+  the diagram the way we do?
+
+	the result is a new commit that incorporates the changes in both branches.
+	the new commit has two parents , the last commit of each branch.
+	
+# What are the pros and cons of Git's automatic merging vs. always doing merges
+  manually?
+
+	pros of automatic merging
+	less work for us
+
+	cons of automatic merging
+	may merge changes that we did not want.
